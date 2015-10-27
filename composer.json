@@ -1,0 +1,32 @@
+{
+  "name": "assayer-pro/yii2-asset-clean",
+  "description": "Yii2 Yii2 console command to clean web/assets/ directory",
+  "homepage": "https://github.com/assayer-pro/yii2-asset-clean",
+  "license": "MIT",
+  "type": "yii2-extension",
+  "authors": [
+    {
+        "name": "Assayer Pro",
+        "homepage" : "https://github.com/assayer-pro"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "yiisoft/yii2-codeception": "~2.0.0",
+    "yiisoft/yii2-faker": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "assayerpro\\assetClean\\": ""
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
