@@ -1,4 +1,12 @@
 actor: Tester
+coverage:
+    enabled: true
+    whitelist:
+        include:
+            - AssetController.php
+        exclude:
+            - vendor/*
+            - tests/*
 paths:
     tests: tests
     log: tests/_output
