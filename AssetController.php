@@ -47,7 +47,7 @@ class AssetController extends \yii\console\controllers\AssetController
     {
         return array_merge(
             parent::options($actionID),
-            ($actionID == 'clean') ? ['assetsDir', 'quiet', 'verbose'] : []
+            ($actionID == 'clean') ? ['assetsDir', 'quiet', 'verbose', 'dryRun'] : []
         );
     }
 
