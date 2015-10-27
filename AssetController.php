@@ -54,9 +54,9 @@ class AssetController extends \yii\console\controllers\AssetController
     /**
      * message
      *
-     * @param $string string
+     * @param string $string
      * @access private
-     * @return void
+     * @return integer|null
      */
     private function message($string)
     {
