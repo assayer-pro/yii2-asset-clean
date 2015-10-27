@@ -47,7 +47,7 @@ class AssetController extends \yii\console\controllers\AssetController
     {
         return array_merge(
             parent::options($actionID),
-            ($actionID == 'clean') ? ['assetsDir', 'quiet', 'verbose'] : []
+            ($actionID == 'clean') ? ['assetsDir', 'quiet', 'verbose', 'dryRun'] : []
         );
     }
 
@@ -80,7 +80,6 @@ class AssetController extends \yii\console\controllers\AssetController
     public function cleanAssetsDir()
     {
         $this->message("Cleaning assets dir...\n", Console::FG_GREEN);
-        $now = time();
         $assetsDirs = glob(Yii::getAlias($this->assetsDir).'/*', GLOB_ONLYDIR);
         foreach ($assetsDirs as $dir) {
             if (in_array(basename($dir), $this->ignoreDirs)) {
