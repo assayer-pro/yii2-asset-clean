@@ -9,11 +9,8 @@
 namespace assayerpro\assetClean;
 
 use Yii;
-use yii\console\Exception;
-use yii\console\Controller;
 use yii\helpers\Console;
 use yii\helpers\FileHelper;
-use yii\helpers\VarDumper;
 
 /**
  * AssetController
@@ -50,7 +47,7 @@ class AssetController extends \yii\console\controllers\AssetController
     {
         return array_merge(
             parent::options($actionID),
-            ($actionID == 'clean')?['assetsDir','quiet','verbose']:[]
+            ($actionID == 'clean') ? ['assetsDir', 'quiet', 'verbose'] : []
         );
     }
 
@@ -84,13 +81,13 @@ class AssetController extends \yii\console\controllers\AssetController
     {
         $this->message("Cleaning assets dir...\n", Console::FG_GREEN);
         $now = time();
-        $assetsDirs = glob(Yii::getAlias($this->assetsDir) . '/*' , GLOB_ONLYDIR);
+        $assetsDirs = glob(Yii::getAlias($this->assetsDir).'/*', GLOB_ONLYDIR);
         foreach ($assetsDirs as $dir) {
             if (in_array(basename($dir), $this->ignoreDirs)) {
-                $this->message('ignored '.$dir.', last modified '.Yii::$app->formatter->asDatetime(filemtime($dir)) . "\n", Console::FG_YELLOW);
+                $this->message('ignored '.$dir.', last modified '.Yii::$app->formatter->asDatetime(filemtime($dir))."\n", Console::FG_YELLOW);
                 continue;
             }
-            $this->message('removed '.$dir.', last modified '.Yii::$app->formatter->asDatetime(filemtime($dir)) . "\n", Console::BOLD);
+            $this->message('removed '.$dir.', last modified '.Yii::$app->formatter->asDatetime(filemtime($dir))."\n", Console::BOLD);
             if (!$this->dryRun) {
                 FileHelper::removeDirectory($dir);
             }
