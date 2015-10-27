@@ -9,11 +9,8 @@
 namespace assayerpro\assetClean;
 
 use Yii;
-use yii\console\Exception;
-use yii\console\Controller;
 use yii\helpers\Console;
 use yii\helpers\FileHelper;
-use yii\helpers\VarDumper;
 
 /**
  * AssetController
