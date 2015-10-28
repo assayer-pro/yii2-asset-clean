@@ -1,6 +1,6 @@
 {
   "name": "assayer-pro/yii2-asset-clean",
-  "description": "Yii2 Yii2 console command to clean web/assets/ directory",
+  "description": "Yii2 console command to clean web/assets/ directory",
   "homepage": "https://github.com/assayer-pro/yii2-asset-clean",
   "license": "MIT",
   "type": "yii2-extension",
