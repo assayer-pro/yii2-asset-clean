@@ -1,0 +1,21 @@
+filter:
+    excluded_paths:
+        - 'tests/*'
+checks:
+    php: true
+coding_style:
+    php:
+        spaces:
+            around_operators:
+                concatenation: false
+build:
+    tests:
+        override:
+            -
+                command: 'vendor/bin/codecept run --coverage-xml=report.xml'
+                coverage:
+                    file: 'tests/_output/report.xml'
+                    format: 'php-clover'
+    dependencies:
+        before:
+            - sudo composer self-update
