@@ -32,7 +32,7 @@ class AssetController extends \yii\console\controllers\AssetController
      */
     public $verbose = false;
     /**
-       @var boolean quiet;  do  not  write  anything to standard output.
+     * @var boolean quiet;  do  not  write  anything to standard output.
      */
     public $quiet = false;
     /**
