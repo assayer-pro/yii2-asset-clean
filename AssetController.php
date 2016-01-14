@@ -74,7 +74,7 @@ class AssetController extends \yii\console\controllers\AssetController
     public function actionClean()
     {
         $this->cleanAssetsDir();
-        return true;
+        return self::EXIT_CODE_NORMAL;
     }
 
     public function cleanAssetsDir()
