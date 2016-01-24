@@ -32,7 +32,7 @@ class AssetController extends \yii\console\controllers\AssetController
      */
     public $verbose = false;
     /**
-       @var boolean quiet;  do  not  write  anything to standard output.
+     * @var boolean quiet;  do  not  write  anything to standard output.
      */
     public $quiet = false;
     /**
@@ -74,7 +74,7 @@ class AssetController extends \yii\console\controllers\AssetController
     public function actionClean()
     {
         $this->cleanAssetsDir();
-        return true;
+        return self::EXIT_CODE_NORMAL;
     }
 
     public function cleanAssetsDir()
